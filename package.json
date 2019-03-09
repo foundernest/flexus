@@ -1,6 +1,6 @@
 {
-  "name": "state-manager",
-  "version": "1.0.0",
+  "name": "flexus",
+  "version": "0.1.0",
   "description": "A all-in-one (local and global) state management library for FounderNest",
   "main": "dist/index.ts",
   "module": "dist/index.es.js",
@@ -11,14 +11,30 @@
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -cw",
-    "test": "jest --env=node --colors --coverage test"
+    "test": "jest --config jest.config.json --env=node",
+    "format": "prettier --write \"{src,__{tests,mocks}__}/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "coveralls": "yarn test --coverage && cat ./coverage/lcov.info | coveralls",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint",
+    "version": "yarn format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
-  "repository": "git@bitbucket.org:foundernest/state-manager.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/foundernest/flexus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/foundernest/flexus/issues"
+  },
+  "homepage": "https://github.com/foundernest/flexus",
   "author": "Ricardo Domínguez Álvarez <r.dominguez.alvarez.dev@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^24.0.9",
     "@types/react": "^16.8.4",
+    "@types/react-test-renderer": "^16.8.1",
     "install-peers": "^1.0.3",
     "jest": "^24.1.0",
     "jest-enzyme": "^7.0.1",
@@ -36,10 +52,5 @@
   },
   "peerDependencies": {
     "react": "^16.8.3"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "es5"
   }
 }

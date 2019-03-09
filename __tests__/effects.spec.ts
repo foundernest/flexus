@@ -1,7 +1,7 @@
 import { mapEffectsToDispatch } from '../src/effects'
 
 describe('mapEffectsToDispatch', () => {
-  it('Produces an identical object constructed of a dispatcher with injected params', () => {
+  it('produces an identical object constructed of a dispatcher with injected params', () => {
     const asyncIncrementThunk = jest.fn(() => 'Effect increment')
     const asyncDecrementThunk = jest.fn(() => 'Effect decrement')
     const effects = {
@@ -30,7 +30,7 @@ describe('mapEffectsToDispatch', () => {
       })
     )
   })
-  it('When effects are not available, it returns an empty object (With typesafety)', () => {
+  it('returns an empty object (with type safety) when effects are not available', () => {
     const effects = {}
     const state = {
       someState: 'hello',

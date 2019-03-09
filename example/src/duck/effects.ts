@@ -1,6 +1,6 @@
 import { CounterState } from "./store";
 import { counterActions } from "./actions";
-import { Effect } from "state-manager";
+import { Effect } from "flexus";
 
 function sleep(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));

@@ -1,4 +1,9 @@
-import { DispatchFunc, ActionMap, ArgumentTypes, ActionHandlerMap } from "./types";
+import {
+  DispatchFunc,
+  ActionMap,
+  ArgumentTypes,
+  ActionHandlerMap,
+} from './types'
 
 export function mapActionsToDispatch<Actions>(
   actions: Actions,

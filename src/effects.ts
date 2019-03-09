@@ -1,15 +1,21 @@
-import { ArgumentTypes, EffectDispatch, ActionHandlerMap, EffectsHandlersMap } from "./types";
+import {
+  ArgumentTypes,
+  EffectDispatch,
+  ActionHandlerMap,
+  EffectsHandlersMap,
+} from './types'
 
 export function mapEffectsToDispatch<State, Actions, Effects>(
   effects: Effects | undefined,
   state: State,
   actions: ActionHandlerMap<Actions>
 ): EffectsHandlersMap<Effects> {
-  if(!effects) {
+  if (!effects) {
     return {} as EffectsHandlersMap<Effects>
   }
   let handlers = {}
-  const callEffect = (callback: EffectDispatch<State, Actions>) => callback({ state, actions, callEffect })
+  const callEffect = (callback: EffectDispatch<State, Actions>) =>
+    callback({ state, actions, callEffect })
 
   Object.keys(effects).map(effectKey => {
     const effect = effects[effectKey]

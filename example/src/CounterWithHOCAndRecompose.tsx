@@ -1,4 +1,4 @@
-import { connect } from 'state-manager'
+import { connect } from 'flexus'
 import { compose } from 'recompose';
 import { CounterStore, CounterStoreParams } from './duck';
 import { createStyles, withStyles } from '@material-ui/styles';

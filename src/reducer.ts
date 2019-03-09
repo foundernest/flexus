@@ -58,13 +58,16 @@ export function combineReducers<S, A = Action<any>>(
     shapeAssertionError = e
   }
 
-  return function combination(receivedState: S | undefined, action: Action<any>) {
+  return function combination(
+    receivedState: S | undefined,
+    action: Action<any>
+  ) {
     if (shapeAssertionError) {
       throw shapeAssertionError
     }
 
     let hasChanged = false
-    const state = receivedState || {} as any
+    const state = receivedState || ({} as any)
     const nextState: S = Object.assign({}, state)
     for (let i = 0; i < finalReducerKeys.length; i++) {
       const key = finalReducerKeys[i] as keyof S

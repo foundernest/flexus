@@ -1,4 +1,4 @@
-import { combineReducers } from "state-manager";
+import { combineReducers } from "flexus";
 import { CounterState } from "./store";
 import { counterActions } from "./actions";
 import { ActionType, getType } from 'typesafe-actions'

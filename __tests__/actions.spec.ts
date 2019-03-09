@@ -1,7 +1,7 @@
 import { mapActionsToDispatch } from '../src/actions'
 
 describe('mapActionsToDispatch', () => {
-  it('Produces an identical object with functions encapsulated in the dispatch', () => {
+  it('produces an identical object with functions encapsulated in the dispatch', () => {
     const actions = {
       increment: jest.fn(() => ({ type: 'INCREMENT' })),
       decrement: jest.fn(() => ({ type: 'DECREMENT' })),

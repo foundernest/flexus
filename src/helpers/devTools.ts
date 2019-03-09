@@ -1,4 +1,4 @@
-import { Action } from "../types";
+import { Action } from '../types'
 
 declare var window: {
   __REDUX_DEVTOOLS_EXTENSION__: any

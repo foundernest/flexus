@@ -1,4 +1,4 @@
-import { createStore, LocalStoreParams } from "state-manager";
+import { createStore, LocalStoreParams } from "flexus";
 import { CounterState, newStore } from "./store";
 import { counterActions } from "./actions";
 import { counterEffects } from "./effects";
