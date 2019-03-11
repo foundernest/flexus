@@ -1,13 +1,23 @@
 {
   "name": "flexus",
-  "version": "0.1.0",
-  "description": "A all-in-one (local and global) state management library for FounderNest",
+  "version": "0.1.0-alpha.0",
+  "description": "A flexible approach to Redux",
   "main": "dist/index.ts",
   "module": "dist/index.es.js",
   "files": [
     "dist"
   ],
   "types": "dist/index.d.ts",
+  "keywords": [
+    "react",
+    "context",
+    "state",
+    "management",
+    "state-management",
+    "store",
+    "redux",
+    "flexible"
+  ],
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -cw",
@@ -18,7 +28,7 @@
     "prepare": "yarn build",
     "prepublishOnly": "yarn test && yarn lint",
     "preversion": "yarn lint",
-    "version": "yarn format && git add -A src",
+    "version": "yarn format && git add -A",
     "postversion": "git push && git push --tags"
   },
   "repository": {
