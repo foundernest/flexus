@@ -1,6 +1,6 @@
 {
   "name": "flexus",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0-alpha.1",
   "description": "A flexible approach to Redux",
   "main": "dist/index.ts",
   "module": "dist/index.es.js",
