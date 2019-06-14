@@ -24,7 +24,7 @@ describe('combineReducers', () => {
       counter?: number
     }
     const reducer = combineReducers<State>({
-      counter(state = 0, action) {
+      counter(state: number = 0, action: any) {
         switch (action && action.type) {
           case 'increment':
             return state + 1
@@ -52,7 +52,7 @@ describe('combineReducers', () => {
       counter?: number
     }
     const reducer = combineReducers<State>({
-      counter(state, action) {
+      counter(state: number, action: any) {
         switch (action.type) {
           case 'increment':
             return state! + 1
@@ -75,13 +75,13 @@ describe('combineReducers', () => {
           child3?: {}
         }
     const reducer = combineReducers<State>({
-      child1(state = {}) {
+      child1(state: {} = {}) {
         return state
       },
-      child2(state = {}) {
+      child2(state: {} = {}) {
         return state
       },
-      child3(state = {}) {
+      child3(state: {} = {}) {
         return state
       },
     })
@@ -101,10 +101,10 @@ describe('combineReducers', () => {
           child3?: {}
         }
     const reducer = combineReducers<State>({
-      child1(state = {}) {
+      child1(state: {} = {}) {
         return state
       },
-      child2(state = { count: 0 }, action) {
+      child2(state: { count: number } = { count: 0 }, action: any) {
         switch (action.type) {
           case 'increment':
             return { count: state.count + 1 }
@@ -112,7 +112,7 @@ describe('combineReducers', () => {
             return state
         }
       },
-      child3(state = {}) {
+      child3(state: {} = {}) {
         return state
       },
     })

@@ -21,7 +21,7 @@
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -cw",
-    "test": "jest --config jest.config.json --env=node",
+    "test": "jest --env=node",
     "format": "prettier --write \"{src,__{tests,mocks}__}/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "coveralls": "yarn test --coverage && cat ./coverage/lcov.info | coveralls",
@@ -38,30 +38,29 @@
   "bugs": {
     "url": "https://github.com/foundernest/flexus/issues"
   },
-  "homepage": "https://github.com/foundernest/flexus",
+  "homepage": "https://github.com/foundernest/flexus#readme",
   "author": "Ricardo Domínguez Álvarez <r.dominguez.alvarez.dev@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^24.0.9",
-    "@types/react": "^16.8.4",
-    "@types/react-test-renderer": "^16.8.1",
-    "coveralls": "^3.0.3",
+    "@types/jest": "^24.0.14",
+    "@types/react": "^16.8.20",
+    "@types/react-test-renderer": "^16.8.2",
+    "coveralls": "^3.0.4",
     "install-peers": "^1.0.3",
-    "jest": "^24.1.0",
-    "jest-enzyme": "^7.0.1",
-    "prettier": "^1.16.4",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-test-renderer": "^16.8.3",
-    "rollup": "^1.2.1",
-    "rollup-plugin-typescript2": "^0.19.2",
-    "ts-jest": "^24.0.0",
-    "tslint": "^5.13.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6",
+    "rollup": "^1.15.5",
+    "rollup-plugin-typescript2": "^0.21.1",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.17.0",
     "tslint-config-prettier": "^1.18.0",
-    "tslint-react": "^3.6.0",
-    "typescript": "^3.3.3"
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.2"
   },
   "peerDependencies": {
-    "react": "^16.8.3"
+    "react": "^16.8.6"
   }
 }
